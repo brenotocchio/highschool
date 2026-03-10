@@ -25,10 +25,10 @@ int main(){
     else if(sbase >= 2 and sbase < 3){
         ir = rendam * 0.05;
     }
-    else if(sbase >= 3 or sbase < 5){
+    else if(sbase >= 3 and sbase < 5){
         ir = rendam * 0.10;
     }
-    else if(sbase >= 5 or sbase < 7){
+    else if(sbase >= 5 and sbase < 7){
         ir = rendam * 0.15;
     }
     else if(sbase >= 7){
