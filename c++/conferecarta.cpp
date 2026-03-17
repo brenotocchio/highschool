@@ -29,6 +29,4 @@ int main(){
         cout<<"Possui carta de habilitação: " << carta << endl;
     }
 
-    return 0;
-    
 }
