@@ -17,18 +17,18 @@ int main(){
     cout<<"Possui carteira de habilitação? S ou N\n";
     cin>>carta;
 
-    if (idade >= 18 && carta == 'S' or carta == 's')
-    {
+    if (idade >= 18 && carta == 'S' or carta == 's'){
         cout<<"Pode dirigir\n";
         cout<<"Idade: " <<idade << endl;
         cout<<"Possui carta de habilitação: " << carta << endl;
     }
 
-    else
-    {
+    else{
         cout<<"Não pode dirigir\n";
         cout<<"Idade: "<<idade<<endl;
         cout<<"Possui carta de habilitação: " << carta << endl;
     }
+
+    return 0;
     
 }
