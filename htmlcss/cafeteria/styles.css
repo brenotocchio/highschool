@@ -1,0 +1,553 @@
+/* ============================================
+   CAFÉ AROMA & GRÃO - LANDING PAGE
+   HTML5 + CSS3 (Sem Flexbox e Grid)
+   Técnicas: Float, Posicionamento, Display Inline-Block
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* ============================================
+   CABEÇALHO E NAVEGAÇÃO
+   ============================================ */
+
+.header {
+    background-color: #2c1810;
+    color: #fff;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: auto;
+}
+
+.logo {
+    float: left;
+    margin-right: 2rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #d4a574;
+}
+
+.nav {
+    float: right;
+    margin-top: 0.5rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d4a574;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d4a574;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Clearfix */
+.header-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   SEÇÃO HERO
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, #6f4e37 0%, #8b6f47 100%);
+    color: #fff;
+    padding: 4rem 2rem;
+    min-height: 500px;
+    position: relative;
+    overflow: auto;
+}
+
+.hero-content {
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 450px;
+}
+
+.hero-image {
+    float: right;
+    width: 45%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 450px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideInRight 0.8s ease-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #e8d5c4;
+    animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #d4a574;
+    color: #2c1810;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+    animation: slideInLeft 0.8s ease-out 0.4s both;
+}
+
+.cta-button:hover {
+    background-color: #e8c9a0;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 165, 116, 0.4);
+}
+
+.hero::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Animações */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   SEÇÃO SOBRE
+   ============================================ */
+
+.about {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.about-text {
+    float: left;
+    width: 55%;
+    padding-right: 2rem;
+}
+
+.about-image {
+    float: right;
+    width: 40%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+    color: #2c1810;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #d4a574;
+    border-radius: 2px;
+}
+
+.about-description {
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.features-list li {
+    padding: 0.8rem 0;
+    color: #2c1810;
+    font-weight: 500;
+    border-bottom: 1px solid #e8d5c4;
+    transition: all 0.3s ease;
+}
+
+.features-list li:hover {
+    padding-left: 1rem;
+    color: #d4a574;
+}
+
+.about-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   SEÇÃO MENU
+   ============================================ */
+
+.menu {
+    background: linear-gradient(180deg, #fafafa 0%, #f5f1ed 100%);
+    padding: 4rem 2rem;
+}
+
+.menu .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.menu-item {
+    float: left;
+    width: calc(33.333% - 1.5rem);
+    margin: 0 0.75rem 2rem 0.75rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-title {
+    color: #2c1810;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-price {
+    color: #d4a574;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.menu-item-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.menu-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* ============================================
+   SEÇÃO DEPOIMENTOS
+   ============================================ */
+
+.testimonials {
+    background-color: #2c1810;
+    color: #fff;
+    padding: 4rem 2rem;
+}
+
+.testimonials .section-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.testimonials .section-title::after {
+    background-color: #d4a574;
+    margin: 1rem auto 0;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.testimonial-card {
+    float: left;
+    width: calc(33.333% - 1.5rem);
+    margin: 0 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #d4a574;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #e8d5c4;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: #d4a574;
+    text-align: right;
+}
+
+.testimonials-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* ============================================
+   SEÇÃO CONTATO
+   ============================================ */
+
+.contact {
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    overflow: auto;
+}
+
+.contact-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item h3 {
+    color: #2c1810;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.contact-info::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+
+footer {
+    background-color: #1a0f08;
+    color: #d4a574;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================================
+   EFEITOS E TRANSIÇÕES
+   ============================================ */
+
+/* Scroll suave para links internos */
+a[href^="#"] {
+    scroll-behavior: smooth;
+}
+
+/* Efeito de fade-in ao carregar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Efeito de hover em links */
+a:not(.nav-link):not(.cta-button) {
+    position: relative;
+}
+
+/* Melhorias de acessibilidade */
+:focus-visible {
+    outline: 2px solid #d4a574;
+    outline-offset: 2px;
+}
