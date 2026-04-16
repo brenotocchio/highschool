@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Style - Contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>🔥 URBAN STYLE</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="index.html#destaques" class="nav-link">Destaques</a></li>
+                    <li><a href="index.html#colecao" class="nav-link">Coleção</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Página de Contato -->
+    <section class="contact-page">
+        <div class="contact-page-container">
+            <h2 class="section-title">Fale com a Gente</h2>
+            
+            <div class="contact-form-wrapper">
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(18) 99999-9999">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto">
+                            <option value="duvida">Dúvida</option>
+                            <option value="orcamento">Orçamento</option>
+                            <option value="troca">Troca/Devolução</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </form>
+                
+                <div class="contact-info-side">
+                    <h3>Outras formas de contato</h3>
+                    <div class="info-item">
+                        <h4>📍 Local</h4>
+                        <p>Galeria do Rock - Loja 42<br>Camelódromo Luiz Carlos Rister, Araçatuba - SP</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📞 WhatsApp</h4>
+                        <p>(18) 91234-5678</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📧 Email</h4>
+                        <p>contato@urbanstyle.com.br</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🕒 Horário</h4>
+                        <p>Seg a Sáb: 09h - 14h<br>Domingo: Fechado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Urban Style. Todos os direitos reservados.</p>
+        <p>Feito com 🔥 e atitude nas ruas.</p>
+    </footer>
+</body>
+</html>
