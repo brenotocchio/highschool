@@ -1,0 +1,608 @@
+/* ============================================
+   URBAN STYLE - STREETWEAR LANDING PAGE
+   HTML5 + CSS3 (Float e Inline-Block)
+   Estilo: Minimalista, Ousado, Urbano
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f4f4;
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* ============================================
+   CABEÇALHO E NAVEGAÇÃO
+   ============================================ */
+
+.header {
+    background-color: #0a0a0a;
+    color: #fff;
+    padding: 1.2rem 0;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #ff4500;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: auto;
+}
+
+.logo {
+    float: left;
+    margin-right: 2rem;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #ff4500; /* Laranja queimado/Street */
+    letter-spacing: 3px;
+}
+
+.nav {
+    float: right;
+    margin-top: 0.6rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+
+.nav-link {
+    color: #ddd;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff4500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff4500;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Clearfix */
+.header-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   SEÇÃO HERO
+   ============================================ */
+
+.hero {
+    background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+    color: #fff;
+    padding: 4rem 2rem;
+    min-height: 550px;
+    position: relative;
+    overflow: auto;
+    border-bottom: 5px solid #ff4500;
+}
+
+.hero-content {
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 450px;
+}
+
+.hero-image {
+    float: right;
+    width: 45%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 450px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 5px 20px 5px; /* Estilo moderno/assimétrico */
+    box-shadow: 0 15px 35px rgba(255, 69, 0, 0.2);
+    border: 1px solid #333;
+    animation: slideInRight 0.8s ease-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #b3b3b3;
+    animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 1.2rem 3rem;
+    border-radius: 5px 20px 5px 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+    animation: slideInLeft 0.8s ease-out 0.4s both;
+    border: 1px solid #ff4500;
+}
+
+.cta-button:hover {
+    background-color: #000;
+    color: #ff4500;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.5);
+    border: 1px solid #fff;
+}
+
+.hero::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Animações */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   SEÇÃO SOBRE
+   ============================================ */
+
+.about {
+    padding: 5rem 2rem;
+    background-color: #fff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.about-text {
+    float: left;
+    width: 55%;
+    padding-right: 2rem;
+}
+
+.about-image {
+    float: right;
+    width: 40%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 30px 10px 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #ff4500;
+}
+
+.section-title {
+    color: #0a0a0a;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 5px;
+    background-color: #ff4500;
+    border-radius: 2px;
+}
+
+.about-description {
+    color: #444;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.features-list li {
+    padding: 0.9rem 0;
+    color: #0a0a0a;
+    font-weight: 600;
+    border-bottom: 1px dashed #ccc;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.features-list li:hover {
+    padding-left: 1.5rem;
+    color: #ff4500;
+    border-bottom: 1px dashed #ff4500;
+}
+
+.about-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   SEÇÃO COLEÇÃO (MENU)
+   ============================================ */
+
+.menu {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d9d9d9 100%);
+    padding: 4rem 2rem;
+}
+
+.menu .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.menu .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.menu-item {
+    float: left;
+    width: calc(33.333% - 1.5rem);
+    margin: 0 0.75rem 2rem 0.75rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ff4500;
+}
+
+/* Espaço para imagem do produto dentro do card */
+.product-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.menu-item-title {
+    color: #0a0a0a;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-price {
+    color: #ff4500;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.menu-item-description {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.menu-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   SEÇÃO DEPOIMENTOS
+   ============================================ */
+
+.testimonials {
+    background-color: #0a0a0a;
+    color: #fff;
+    padding: 4rem 2rem;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none" /><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
+    background-size: 50px 50px;
+}
+
+.testimonials .section-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.testimonials .section-title::after {
+    background-color: #ff4500;
+    margin: 1rem auto 0;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.testimonial-card {
+    float: left;
+    width: calc(33.333% - 1.5rem);
+    margin: 0 0.75rem;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 2rem;
+    border-radius: 15px 0 15px 0;
+    border-top: 3px solid #ff4500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.testimonial-card:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-5px) scale(1.02);
+    border-left: 3px solid #ff4500;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: #ff4500;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonials-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   SEÇÃO CONTATO
+   ============================================ */
+
+.contact {
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-info {
+    overflow: auto;
+}
+
+.contact-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.contact-item h3 {
+    color: #0a0a0a;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #ff4500;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact-item p {
+    color: #444;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.contact-info::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+
+footer {
+    background-color: #0a0a0a;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    border-top: 2px solid #ff4500;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+    color: #ff4500;
+}
+
+/* ============================================
+   EFEITOS E TRANSIÇÕES
+   ============================================ */
+
+a[href^="#"] {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 0.5s ease-in;
+}
+
+:focus-visible {
+    outline: 3px solid #ff4500;
+    outline-offset: 3px;
+}
