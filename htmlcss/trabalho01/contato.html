@@ -2,94 +2,102 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Style - Contato</title>
+    <title>Contato - Street Style</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <h1>🔥 URBAN STYLE</h1>
-            </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Início</a></li>
-                    <li><a href="index.html#destaques" class="nav-link">Destaques</a></li>
-                    <li><a href="index.html#colecao" class="nav-link">Coleção</a></li>
-                    <li><a href="contato.html" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Página de Contato -->
-    <section class="contact-page">
-        <div class="contact-page-container">
-            <h2 class="section-title">Fale com a Gente</h2>
+    <!-- CABEÇALHO -->
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>STREET STYLE</h1>
+                <p>Camisetas exclusivas</p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#produtos">Produtos</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="limpar"></div>
+        </div>
+    </div>
+
+    <!-- CONTATO COM FORMULÁRIO -->
+    <div class="pagina-contato">
+        <div class="container">
+            <h2 class="titulo">Fale Conosco</h2>
             
-            <div class="contact-form-wrapper">
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            <div class="formulario-area">
+                <form action="#" method="post">
+                    <div class="campo">
+                        <label>Nome completo:</label>
+                        <input type="text" name="nome" required>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+                    <div class="campo">
+                        <label>E-mail:</label>
+                        <input type="email" name="email" required>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="(18) 99999-9999">
+
+                    <div class="campo">
+                        <label>Telefone:</label>
+                        <input type="tel" name="telefone">
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="assunto">Assunto:</label>
-                        <select id="assunto" name="assunto">
-                            <option value="duvida">Dúvida</option>
-                            <option value="orcamento">Orçamento</option>
-                            <option value="troca">Troca/Devolução</option>
-                            <option value="outro">Outro</option>
+
+                    <div class="campo">
+                        <label>Assunto:</label>
+                        <select name="assunto" required>
+                            <option value="">Selecione...</option>
+                            <option>Dúvida sobre produto</option>
+                            <option>Trocas e devoluções</option>
+                            <option>Parceria</option>
                         </select>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+                    <div class="campo">
+                        <label>Mensagem:</label>
+                        <textarea rows="5" name="mensagem" required></textarea>
                     </div>
-                    
-                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+
+                    <div class="campo checkbox">
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            Quero receber novidades
+                        </label>
+                    </div>
+
+                    <button type="submit" class="botao-enviar">Enviar</button>
                 </form>
-                
-                <div class="contact-info-side">
-                    <h3>Outras formas de contato</h3>
-                    <div class="info-item">
-                        <h4>📍 Local</h4>
-                        <p>Galeria do Rock - Loja 42<br>Camelódromo Luiz Carlos Rister, Araçatuba - SP</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📞 WhatsApp</h4>
-                        <p>(18) 91234-5678</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📧 Email</h4>
-                        <p>contato@urbanstyle.com.br</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>🕒 Horário</h4>
-                        <p>Seg a Sáb: 09h - 14h<br>Domingo: Fechado</p>
-                    </div>
+            </div>
+
+            <div class="info-contato">
+                <div class="info-item">
+                    <h3>📍 Endereço</h3>
+                    <p>Rua Quinze de Novembro<br>Araçatuba - SP</p>
+                </div>
+                <div class="info-item">
+                    <h3>📞 Telefone</h3>
+                    <p>(18) 3456-7890</p>
+                </div>
+                <div class="info-item">
+                    <h3>📧 E-mail</h3>
+                    <p>contato@streetstyle.com.br</p>
                 </div>
             </div>
+            <div class="limpar"></div>
         </div>
-    </section>
+    </div>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>&copy; 2024 Urban Style. Todos os direitos reservados.</p>
-        <p>Feito com 🔥 e atitude nas ruas.</p>
-    </footer>
+    <!-- RODAPÉ -->
+    <div class="footer">
+        <div class="container">
+            <p>2026 Street Style - Todos os direitos reservados</p>
+        </div>
+    </div>
+
 </body>
 </html>
