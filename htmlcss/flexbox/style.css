@@ -1,0 +1,26 @@
+*{
+    background-color: #000;
+    color: #ff0;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
+.container{
+    border: 3px solid #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.item1, .item2, .item3{
+    border: 1px solid #fff;
+    width: 100px;
+    height: 100px;
+}
+
+.item1{
+    flex-grow: 0;
+}
